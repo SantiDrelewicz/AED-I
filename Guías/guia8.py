@@ -5,7 +5,7 @@ Created on Thu May 23 14:52:12 2024
 @author: santiago
 """
 
-from p7 import *
+from guia7 import *
 
 # 1. Archivos
 
@@ -348,3 +348,4 @@ def calcular_valor_inventario(inventario : dict[str, dict[str, int]]) -> float:
     
     
     
+
