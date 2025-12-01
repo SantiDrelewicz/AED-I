@@ -128,7 +128,7 @@ cifrandoVigenere :: String -> String -> String
 cifrandoVigenere [] (y:ys) = []
 cifrandoVigenere [] [] = []
 cifrandoVigenere (x:xs) (y:ys) = (desplazar x n) : (cifrandoVigenere xs ys)
-                             where n = letraANatural y
+                                 where n = letraANatural y
                       
 -- EJ 13
 descifrarVigenere :: String -> String -> String
@@ -138,7 +138,7 @@ descifrandoVigenere :: String -> String -> String
 descifrandoVigenere [] (y:ys) = []
 descifrandoVigenere [] [] = []
 descifrandoVigenere (x:xs) (y:ys) = desplazar x (-n) : descifrandoVigenere xs ys
-                              where n = letraANatural y
+                                    where n = letraANatural y
 
 -- EJ 14
 peorCifrado :: String -> [String] -> String
@@ -168,3 +168,4 @@ obtenerClaves :: String -> [String] -> String -> [(String, String)]
 obtenerClaves m [] cifrado = []
 obtenerClaves m (c:cs) cifrado | cifrarVigenere m c == cifrado = (m,c) : (obtenerClaves m cs cifrado)
                                | otherwise = obtenerClaves m cs cifrado
+
